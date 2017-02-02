@@ -20,6 +20,11 @@
         <li><a href="http://www..../contact">Contact</a></li>
       </ul>
       <p class="time" style="color: white"><%= Time.now.to_formatted_s(:short) %></p>
+      <div id="cart">
+        <% if @cart %>
+          <%= render @cart %>
+        <% end %>
+      </div>
     </div>
     <div id="main">
       <%= yield %>
