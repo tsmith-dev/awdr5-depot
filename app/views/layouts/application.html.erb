@@ -20,11 +20,11 @@
         <li><a href="http://www..../contact">Contact</a></li>
       </ul>
       <p class="time" style="color: white"><%= Time.now.to_formatted_s(:short) %></p>
-      <div id="cart">
-        <% if @cart %>
-          <%= render @cart %>
+      <% if @cart %>
+        <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+          <%= render(@cart) %>
         <% end %>
-      </div>
+      <% end %>
     </div>
     <div id="main">
       <%= yield %>
