@@ -6,4 +6,8 @@ class LineItem < ApplicationRecord
     price * quantity
   end
   
+  def decrement_product_quantity
+    self.quantity -= 1
+  end
+  
 end
