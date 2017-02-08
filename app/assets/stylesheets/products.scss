@@ -50,3 +50,14 @@
   }
 }
 
+.current_product {
+    background: white;
+    color: black;
+    animation-name: example;
+    animation-duration: 3s;
+  }  
+
+  @keyframes example {
+    from {background-color: red;color: white;}
+    to {background-color: white;color: black;}
+  }

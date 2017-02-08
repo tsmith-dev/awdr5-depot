@@ -12,7 +12,13 @@
         <h3><%= product.title %></h3>
         <%= sanitize(product.description) %>
         <div class="price_line">
-          <span class="price"><%= number_to_currency(product.price) %></span>
+          <% if product == @product %>
+            <span class="price current_product">
+              <% else %>
+            <span class="price">
+          <% end %>
+            <%= number_to_currency(product.price) %>
+          </span>
           <%= button_to 'Add to Cart', line_items_path(product_id: product),
                                                               remote: true %>
         </div>
@@ -25,3 +31,4 @@
   <h2><%= session[:visits] %> Index Views</h2>
 <% end %>
 
+<%= @product.inspect %>
