@@ -6,8 +6,8 @@ one:
   price: 9.99
 
 two:
-  product: two
+  product: ruby
   cart: two
   price: 9.99
-  
+  order: one  
 
